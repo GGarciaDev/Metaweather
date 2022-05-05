@@ -1,5 +1,7 @@
 package com.mega.metaweather.data.dto
 
+import com.mega.metaweather.domain.model.DisplayData
+
 data class Location(
     val consolidated_weather: List<ConsolidatedWeather>,
     val latt_long: String,
@@ -14,3 +16,14 @@ data class Location(
     val title: String,
     val woeid: Int
 )
+
+fun Location.toDisplayData():DisplayData{
+    return DisplayData(
+        lowestTemperature = consolidated_weather[0].min_temp,
+        highestTemperature = consolidated_weather[0].max_temp,
+        currentTemperature = consolidated_weather[0].the_temp,
+        weather = consolidated_weather[0].weather_state_name,
+        title = title,
+        imageUrl = null
+    )
+}
