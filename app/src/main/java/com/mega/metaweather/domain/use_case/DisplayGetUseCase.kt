@@ -1,5 +1,6 @@
 package com.mega.metaweather.domain.use_case
 
+import com.mega.metaweather.api.MetaweatherService
 import com.mega.metaweather.data.dto.toDisplayData
 import com.mega.metaweather.domain.model.DisplayData
 import com.mega.metaweather.domain.repository.LocationRepository
@@ -17,6 +18,7 @@ class DisplayGetUseCase @Inject constructor(
         try{
             emit(Events.Loading<DisplayData>())
             val displayData = repository.getLocationById("").toDisplayData()
+            displayData.imageUrl = "${MetaweatherService.IMAGE_URL}${displayData.weather_abbr}.svg"
             emit(Events.Success<DisplayData>(displayData))
         }
         catch (e: HttpException){

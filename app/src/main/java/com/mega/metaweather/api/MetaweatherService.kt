@@ -15,7 +15,8 @@ interface MetaweatherService {
     suspend fun getLocationById(@Path("id") id : String): Location
 
     companion object {
-        private const val BASE_URL = "https://www.metaweather.com/"
+        const val BASE_URL = "https://www.metaweather.com/"
+        const val IMAGE_URL = "${BASE_URL}static/img/weather/"
 
         fun create(): MetaweatherService {
             val logger = HttpLoggingInterceptor().apply { level = Level.BASIC }
