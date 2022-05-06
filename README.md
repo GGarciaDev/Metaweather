@@ -1,8 +1,8 @@
 # Metaweather
 <p align="center">This demonstrates modern Android development with Hilt, Coroutines, Flow, Jetpack, ViewModel, and Material Design based on MVVM architecture.</p>
 
-Screenshots
------------
+## Screenshots
+
 ![App screen](screenshots/screenshot_1.png "Demonstration of app")
 
 ## Getting started
@@ -33,7 +33,6 @@ This is project is a "Take Home Project", it was inspired by other projects such
 
 ### Android projects
 - [Sunflower](https://github.com/android/sunflower) - A gardening app illustrating Android development best practices with Android Jetpack.
-
 
 ## Trade Offs
 
