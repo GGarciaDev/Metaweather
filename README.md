@@ -39,7 +39,7 @@ This is project is a "Take Home Project", it was inspired by other projects such
 
 I've tried following the 3 hours deadline, it was a close call for finishing the app so I didn't went too hard on tests, just a simple use case scenario but with hilt injection structure for testing with the viewmodel.
 
-###Project Structure
+## Project Structure
 ```bash
 MetaweatherApplication.kt
 ├──api
