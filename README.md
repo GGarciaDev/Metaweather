@@ -45,22 +45,22 @@ MetaweatherApplication.kt
 |  └──MetaweatherService.kt
 ├──data
 |  ├──dto
-|  |       ConsolidatedWeather.kt
-|  |       Location.kt
-|  |       Parent.kt
-|  |       Source.kt
+|  |  ConsolidatedWeather.kt
+|  |  Location.kt
+|  |  Parent.kt
+|  |  Source.kt
 |  └──repository
-|           LocationRepositoryImplementation.kt     
+|     LocationRepositoryImplementation.kt     
 ├──di
-|       NetworkModule.kt
-|       RepositoriesModule.kt
+|  NetworkModule.kt
+|  RepositoriesModule.kt
 ├──domain
 |   ├──model
-|   |       DisplayData.kt
+|   |  DisplayData.kt
 |   ├──repository
-|   |       LocationRepository.kt
+|   |  LocationRepository.kt
 |   └──use_case
-|           DisplayGetUseCase.kt  
+|      DisplayGetUseCase.kt  
 ├──presentation
 |   LocationItem.kt
 |   LocationScreen.kt
