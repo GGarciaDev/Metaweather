@@ -17,7 +17,7 @@ class DisplayGetUseCase @Inject constructor(
     operator fun invoke() : Flow<Events<DisplayData>> = flow{
         try{
             emit(Events.Loading<DisplayData>())
-            val displayData = repository.getLocationById("").toDisplayData()
+            val displayData = repository.getLocationById("4118").toDisplayData()
             displayData.imageUrl = "${MetaweatherService.IMAGE_URL}${displayData.weather_abbr}.svg"
             emit(Events.Success<DisplayData>(displayData))
         }

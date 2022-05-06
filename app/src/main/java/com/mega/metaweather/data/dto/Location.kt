@@ -19,9 +19,9 @@ data class Location(
 
 fun Location.toDisplayData():DisplayData{
     return DisplayData(
-        lowestTemperature = consolidated_weather[0].min_temp,
-        highestTemperature = consolidated_weather[0].max_temp,
-        currentTemperature = consolidated_weather[0].the_temp,
+        lowestTemperature = consolidated_weather[0].min_temp.toInt(),
+        highestTemperature = consolidated_weather[0].max_temp.toInt(),
+        currentTemperature = consolidated_weather[0].the_temp.toInt(),
         weather = consolidated_weather[0].weather_state_name,
         weather_abbr = consolidated_weather[0].weather_state_abbr,
         title = title,
